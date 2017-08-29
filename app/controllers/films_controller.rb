@@ -1,4 +1,5 @@
 class FilmsController < ApplicationController
+    before_action :authenticate_user!
     def index
         @films = Film.all
     end
@@ -13,6 +14,8 @@ class FilmsController < ApplicationController
 
     def create
         @film = Film.create!(film_params)
+
+        redirect_to film_path(@film)
     end
 
     def edit
