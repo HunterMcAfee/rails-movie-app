@@ -1,0 +1,4 @@
+<%= render partial: "film_form" %>
+<%= form_for @film, method: :delete do |f|%>
+  <%= f.submit "Delete", class: "delete" %>
+<% end %>
