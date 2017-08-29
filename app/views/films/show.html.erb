@@ -4,3 +4,5 @@
 <div>Genre: <%= @film.genre %></div>
 <div>Year: <%= @film.year %></div>
 <div>Synopsis: <%= @film.synopsis %></div>
+
+<%= button_to 'Add to favorites', favorites_path(:film_id => @film.id), method: :post %>
