@@ -1,4 +1,13 @@
-<%= render partial: "film_form" %>
-<%= form_for @film, method: :delete do |f|%>
-  <%= f.submit "Delete", class: "delete" %>
-<% end %>
+<div class="row text-center">
+    <div class="col">
+        <%= render partial: "film_form" %>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+    <%= form_for @film, method: :delete do |f|%>
+    <%= f.submit "Delete", class: "btn btn-danger" %>
+    <% end %>
+    </div>
+</div>
